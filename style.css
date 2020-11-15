@@ -1,0 +1,234 @@
+html {
+  background: azure;
+  font-family: sans-serif;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 534px;
+  margin: 50px auto 20px;
+}
+
+.field-input {
+  display: block;
+  /*margin: 70px auto 20px;*/
+  width: 300px;
+  height: 35px;
+  position: relative;
+  border: none;
+  background: white;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,0.09);
+  border-radius: 35px;
+  overflow: hidden;
+}
+
+.form-input {
+  width: 200px;
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 0.8rem;
+  color: #6A7C92;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.form-submit {
+  font-size: 0.75rem;
+  color: #6A7C92;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 70px;
+  height: 51px;
+  border-radius: 17px;
+  border: none;
+  background: #e8e8e859;
+  outline: none;
+  box-shadow: 5px -2px 81px 1px rgba(0,0,0,0.09);
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  transition: 0.2s background-color ease-in;
+
+  background: #fbb1b159;
+}
+
+.result-block {
+  width: 500px;
+  min-height: 20px;
+  margin: 0 auto;
+  padding: 0.4rem 1rem;
+
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6A7C92;
+  
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,0.09);
+}
+
+.text-block {
+  margin-bottom: 0.5rem;
+  overflow-x: hidden;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 45px;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  background-color: #fff;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,0.09);
+}
+
+.controls__language {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 175px;
+}
+
+.controls__play {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 150px;
+}
+
+.play-btn {
+  position: relative;
+  width: 44px;
+  height: 21px;
+
+  border: none;
+  border-radius: 34px;
+  background-color: #e6e6e6;
+  outline: none;
+}
+
+.play-btn-active {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.play-btn-active:hover {
+  transition: 0.3s box-shadow ease;
+  box-shadow: 0 3px 5px 0 #ccc;;
+}
+
+.play-btn::before {
+  content: '';
+  position: absolute;
+  top: -4%;
+  left: 44%;
+  display: block;
+  width: 3px;
+  height: 15px;
+  background: #fff;
+  
+  transform: rotate(60deg);
+}
+.play-btn::after {
+  content: '';
+  position: absolute;
+  top: 27%;
+  left: 44%;
+  display: block;
+  width: 3px;
+  height: 15px;
+  background: #fff;
+  transform: rotate(-60deg);
+}
+
+.language-toggler {
+  
+}
+
+.language-toggler > span {
+  font-size: 0.8rem;
+  color: #6A7C92;
+}
+
+.controls__title {
+  font-size: 0.75rem;
+  color: #6A7C92;
+}
+
+
+/* ---------- input toggle styles ---------- */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 21px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #f9757559;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #f9757559;
+}
+
+input:checked + .slider:before {
+  transform: translateX(21px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:hover {
+  transition: 0.3s box-shadow ease;
+  box-shadow: 0 3px 5px 0 #ccc;;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
